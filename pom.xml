@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <poi-ooxml.version>4.1.0</poi-ooxml.version>
     </properties>
 
     <dependencies>
@@ -47,9 +48,22 @@
             <version>0.0.1</version>
         </dependency>
         <dependency>
-            <groupId>com.github.csp</groupId>
-            <artifactId>spring-boot-rocket-mq-producer-starter</artifactId>
-            <version>0.0.1</version>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi-ooxml.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi-ooxml.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>${poi-ooxml.version}</version>
+
         </dependency>
     </dependencies>
     <build>
