@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.test.mapper.TunnelReconTestMapper">
+  <resultMap id="BaseResultMap" type="com.example.test.entity.TunnelReconTest">
+    <!--@mbg.generated-->
+    <!--@Table sp_batch_tunnel_recon_test-->
+    <id column="PID" jdbcType="BIGINT" property="pid" />
+    <result column="TXN_ID" jdbcType="VARCHAR" property="txnId" />
+    <result column="MSG_ID" jdbcType="VARCHAR" property="msgId" />
+    <result column="REQ_ID" jdbcType="VARCHAR" property="reqId" />
+    <result column="ORDER_ID" jdbcType="VARCHAR" property="orderId" />
+    <result column="END_TO_END_NO" jdbcType="VARCHAR" property="endToEndNo" />
+    <result column="TUNNEL_ID" jdbcType="VARCHAR" property="tunnelId" />
+    <result column="SNDR_NO" jdbcType="VARCHAR" property="sndrNo" />
+    <result column="AMOUNT" jdbcType="DECIMAL" property="amount" />
+    <result column="CCY" jdbcType="VARCHAR" property="ccy" />
+    <result column="BIZ_TYPE" jdbcType="VARCHAR" property="bizType" />
+    <result column="MSG_TYPE" jdbcType="VARCHAR" property="msgType" />
+    <result column="TXN_TYPE" jdbcType="VARCHAR" property="txnType" />
+    <result column="TXN_TIME" jdbcType="VARCHAR" property="txnTime" />
+    <result column="TXN_STATUS" jdbcType="VARCHAR" property="txnStatus" />
+    <result column="RECON_STATUS" jdbcType="VARCHAR" property="reconStatus" />
+    <result column="BATCH_DATE" jdbcType="VARCHAR" property="batchDate" />
+    <result column="RECON_DATE" jdbcType="VARCHAR" property="reconDate" />
+    <result column="MERCH_ID" jdbcType="VARCHAR" property="merchId" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="SPLIT_GROUP_ID" jdbcType="VARCHAR" property="splitGroupId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    PID, TXN_ID, MSG_ID, REQ_ID, ORDER_ID, END_TO_END_NO, TUNNEL_ID, SNDR_NO, AMOUNT, 
+    CCY, BIZ_TYPE, MSG_TYPE, TXN_TYPE, TXN_TIME, TXN_STATUS, RECON_STATUS, BATCH_DATE, 
+    RECON_DATE, MERCH_ID, CREATE_TIME, MODIFY_TIME, SPLIT_GROUP_ID
+  </sql>
+</mapper>

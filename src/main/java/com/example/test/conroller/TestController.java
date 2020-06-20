@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.conroller;
 
 import com.alibaba.rocketmq.client.exception.MQBrokerException;
 import com.alibaba.rocketmq.client.exception.MQClientException;
@@ -6,6 +6,9 @@ import com.alibaba.rocketmq.client.producer.MQProducer;
 import com.alibaba.rocketmq.common.message.Message;
 import com.alibaba.rocketmq.common.message.MessageExt;
 import com.alibaba.rocketmq.remoting.exception.RemotingException;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.test.entity.TunnelReconTest;
+import com.example.test.service.TunnelReconTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,11 +26,13 @@ public class TestController {
     private ThreadPoolExecutor executor;
     @Autowired
     private MQProducer mqProducer;
+    @Autowired
+    private TunnelReconTestService tunnelReconTestService;
 
     @RequestMapping("/test")
     @ResponseBody
-    public String test(String s) {
-        executor.execute(() -> {
+    public Object test(String s) {
+        /*executor.execute(() -> {
             try {
                 Message msg = new Message("testTopic",s.getBytes());
                 mqProducer.send(msg);
@@ -40,7 +45,8 @@ public class TestController {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        });
-        return "this the value of the method return";
+        });*/
+        Page<TunnelReconTest> page = new Page<>(1,10);
+        return tunnelReconTestService.page(page).getRecords();
     }
 }

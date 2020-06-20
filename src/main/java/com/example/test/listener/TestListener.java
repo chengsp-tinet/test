@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.listener;
 
 import com.alibaba.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import com.alibaba.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
@@ -17,9 +17,8 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @date 2020/5/29 17:20
  */
 @Component
-public class TestListener2 implements MessageListenerConcurrently {
-    private final static Logger logger = LoggerFactory.getLogger(TestListener2.class);
-
+public class TestListener implements MessageListenerConcurrently {
+    private final static Logger logger = LoggerFactory.getLogger(TestListener.class);
 
     @Autowired
     private ThreadPoolExecutor executor;
